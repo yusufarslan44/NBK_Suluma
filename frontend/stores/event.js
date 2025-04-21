@@ -14,7 +14,7 @@ export const useEventStore = defineStore('event', {
             this.loading = true
             this.error = null
             try {
-                const response = await $fetch('http://localhost:5000/api/events')
+                const response = await $fetch('http://localhost:5002/api/events')
                 console.log("fecht events response", response);
                 this.events = response
                 console.log("events", this.events);
@@ -31,7 +31,7 @@ export const useEventStore = defineStore('event', {
             this.loading = true
             this.error = null
             try {
-                const response = await fetch('http://localhost:5000/api/events/upcoming')
+                const response = await fetch('http://localhost:5002/api/events/upcoming')
                 const data = await response.json()
                 this.upcomingEvents = data
             } catch (error) {
@@ -47,7 +47,7 @@ export const useEventStore = defineStore('event', {
             this.loading = true
             this.error = null
             try {
-                const response = await fetch('http://localhost:5000/api/events', {
+                const response = await fetch('http://localhost:5002/api/events', {
                     method: 'POST',
                     body: formData
                 })
@@ -73,7 +73,7 @@ export const useEventStore = defineStore('event', {
             this.loading = true
             this.error = null
             try {
-                const response = await fetch(`http://localhost:5000/api/events/${eventId}`, {
+                const response = await fetch(`http://localhost:5002/api/events/${eventId}`, {
                     method: 'PUT',
                     body: formData
                 })
@@ -102,7 +102,7 @@ export const useEventStore = defineStore('event', {
             this.loading = true
             this.error = null
             try {
-                const response = await fetch(`http://localhost:5000/api/events/${eventId}`, {
+                const response = await fetch(`http://localhost:5002/api/events/${eventId}`, {
                     method: 'DELETE'
                 })
                 if (response.ok) {

@@ -129,7 +129,7 @@ import { useStatisticStore } from '@/stores/statistic'
 import AdminEvent from '~/components/adminCampaigns.vue'
 import AdminGallery from '~/components/AdminGallery.vue'
 import AdminStatistics from '~/components/AdminStatistics.vue'
-import AdminNews from '~/components/AdminNews.vue'
+import AdminNews from '~/components/AdminProduct.vue'
 
 const photoStore = usePhotoStore()
 const eventStore = useEventStore()

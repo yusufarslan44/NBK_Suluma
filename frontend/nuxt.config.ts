@@ -39,11 +39,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     // Server-side environment variables
-    apiUrl: process.env.API_URL || 'http://localhost:5000',
+    apiUrl: process.env.API_URL || 'http://localhost:5002',
 
     // Client-side environment variables
     public: {
-      apiUrl: process.env.API_URL || 'http://localhost:5000'
+      apiUrl: process.env.API_URL || 'http://localhost:5002'
     }
   },
 

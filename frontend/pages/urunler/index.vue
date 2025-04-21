@@ -10,7 +10,7 @@
             </v-col>
         </v-row>
 
-        <!-- Öne Çıkan Haber -->
+        <!-- Öne Çıkan ürün -->
         <v-row class="mb-16" v-if="featuredProduct">
             <v-col cols="12">
                 <v-card elevation="2">

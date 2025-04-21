@@ -17,7 +17,7 @@ export const useProductStore = defineStore("product", {
       this.loading = true;
       this.error = null;
       try {
-        const response = await $fetch("http://localhost:5000/api/product/");
+        const response = await $fetch("http://localhost:5002/api/product/");
         console.log("fecht product response", response);
         this.product = response.product;
         console.log("product", this.product);
@@ -33,7 +33,7 @@ export const useProductStore = defineStore("product", {
       this.loading = true;
       this.error = null;
       try {
-        const response = await $fetch(`http://localhost:5000/api/product/` + id);
+        const response = await $fetch(`http://localhost:5002/api/product/` + id);
         console.log("fecht product detail response", response);
         this.detailProduct = response.product;
         return this.detailProduct;
@@ -48,7 +48,7 @@ export const useProductStore = defineStore("product", {
       this.loading = true;
       this.error = null;
       try {
-        const response = await $fetch(`http://localhost:5000/api/product/related/` + id);
+        const response = await $fetch(`http://localhost:5002/api/product/related/` + id);
         console.log("fecht related response", response);
         this.relatedProduct = response.relatedProduct;
         console.log("relatedProduct", this.relatedProduct);
@@ -66,7 +66,7 @@ export const useProductStore = defineStore("product", {
       this.loading = true;
       this.error = null;
       try {
-        const response = await $fetch("http://localhost:5000/api/product/upcoming");
+        const response = await $fetch("http://localhost:5002/api/product/upcoming");
         const data = await response.json();
         this.upcomingProduct = data;
       } catch (error) {
@@ -84,7 +84,7 @@ export const useProductStore = defineStore("product", {
       this.error = null;
       try {
         const { data } = await axios.post(
-          "http://localhost:5000/api/product/",
+          "http://localhost:5002/api/product/",
           formData
         );
         console.log("response ", data);
@@ -103,7 +103,7 @@ export const useProductStore = defineStore("product", {
       this.error = null;
       try {
         const response = await fetch(
-          `http://localhost:5000/api/product/${productId}`,
+          `http://localhost:5002/api/product/${productId}`,
           {
             method: "PUT",
             body: formData,
@@ -135,7 +135,7 @@ export const useProductStore = defineStore("product", {
       this.error = null;
       try {
         const response = await fetch(
-          `http://localhost:5000/api/product/${productId}`,
+          `http://localhost:5002/api/product/${productId}`,
           {
             method: "DELETE",
           }
